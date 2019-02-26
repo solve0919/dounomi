@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>どうなる飲み会</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="/">どうなる飲み会</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/posts/d_Circumstances">経緯 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">リンク</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="/posts/d_backnumber">記事一覧</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link disabled" href="/posts/new">投稿</a>
+      </li>
+
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">関連リンク</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <a class="dropdown-item" href="http://okita-museum.com/profile/">オキタリュウイチについて</a>
+          <a class="dropdown-item" href="http://okita-museum.com/">ブランド戦略事務所</a>
+          <a class="dropdown-item" href="/authers/login">ログイン</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    <div class="space">
+        <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+      <%= yield %>
+    </div>
+  </body>
+</html>
