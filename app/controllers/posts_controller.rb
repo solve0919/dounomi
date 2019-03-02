@@ -20,8 +20,6 @@ class PostsController < ApplicationController
   end
 
   def create
-  
-  
     @post = Post.new(post_params)
     if params[:image_url] != nil
       image_url = MiniMagick::Image.read(params[:image_url])
@@ -30,8 +28,8 @@ class PostsController < ApplicationController
     end
 
     if @post.save
-    flash[:notice] = "記事を投稿しました。"
-    redirect_to("/")
+      flash[:notice] = "記事を投稿しました。"
+      redirect_to("/")
     else
       render :new
     end
@@ -44,7 +42,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
-    redirect_to("/")
+      redirect_to("/")
     else
       render :edit
     end

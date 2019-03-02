@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
     collection do
       get "d_backnumber"
-      get "d_profile"
+      get "d_about"
       get "d_Circumstances"
     end
   end

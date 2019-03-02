@@ -19,10 +19,10 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="/posts/d_Circumstances">経緯 <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/posts/d_about">どうなる飲み会について <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">リンク</a>
+        <a class="nav-link" href="/posts/d_Circumstances">経緯</a>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="/posts/d_backnumber">記事一覧</a>
@@ -30,8 +30,8 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">関連リンク</a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="http://okita-museum.com/profile/">オキタリュウイチについて</a>
-          <a class="dropdown-item" href="http://okita-museum.com/">ブランド戦略事務所</a>
+          <a class="dropdown-item" href="http://okita-museum.com/profile/" , target="_blank">オキタリュウイチについて</a>
+          <a class="dropdown-item" href="http://okita-museum.com/" , target="_blank">ブランド戦略事務所</a>
           <a class="dropdown-item" href="/login">ログイン</a>
         </div>
       </li>
@@ -57,9 +57,9 @@
       </div>
     <% end %>
     <% if session[:user_id] %>
- <li>
-  現在ログインしているユーザーのid: <%= session[:user_id] %>
- </li>
+  <li>
+    現在ログインしているユーザーのid: <%= session[:user_id] %>
+  </li>
 <% end %>
       <%= yield %>
     </div>
