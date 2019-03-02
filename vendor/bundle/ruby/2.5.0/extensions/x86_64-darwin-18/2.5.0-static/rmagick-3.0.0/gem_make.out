@@ -1,5 +1,5 @@
 current directory: /Users/salt/tugutuge/next/vendor/bundle/ruby/2.5.0/gems/rmagick-3.0.0/ext/RMagick
-/Users/salt/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20190221-2141-mhequi.rb extconf.rb
+/Users/salt/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20190227-8732-ppzci1.rb extconf.rb
 checking for clang... yes
 checking for Magick-config... no
 checking for pkg-config... yes

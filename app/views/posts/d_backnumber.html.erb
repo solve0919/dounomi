@@ -1,14 +1,16 @@
 <body>
   <main role="main">
-    <div class="jumbotron">
-    <h1>バックナンバー</h1>
+    <div class="container backnumber">
+      <h1>バックナンバー</h1>
+      <div class ="col-md-6">
       <% @posts.each do |post|%>
-        <div class ="row container">
-          <p><%= link_to(post.title,"/posts/#{post.id}") %></p>
-          <p><%=  image_tag post.image_url.to_s %></p>
+        <div class="row h3 mt-3">
+          <%= link_to(post.title,"/posts/#{post.id}") %>
+        </div>
+        <div class ="conteiner">
+          <%=  link_to(image_tag(post.image_url.to_s) ,"/posts/#{post.id}")   %>
         </div>
       <% end %>
     </div>
   </div>
-
 </main>

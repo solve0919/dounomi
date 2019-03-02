@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action  :author_user ,{only: [:new ,:edit ,:create ,:update]}
+
   def index
     @posts = Post.all
     @posts = Post.order(created_at: :desc).limit(3)
@@ -18,8 +20,15 @@ class PostsController < ApplicationController
   end
 
   def create
-    
+  
+  
     @post = Post.new(post_params)
+    if params[:image_url] != nil
+      image_url = MiniMagick::Image.read(params[:image_url])
+      image_url.resize_to_fill "128,128"
+      image_url.write "public/images/hoge.jpg"
+    end
+
     if @post.save
     flash[:notice] = "記事を投稿しました。"
     redirect_to("/")
@@ -45,6 +54,14 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy
     redirect_to("/")
+  end
+
+  def author_user
+    if session[:user_id].to_i >= 1
+    else
+      flash[:notice] = "権限がありません"
+      redirect_to("/")
+    end
   end
 
   def post_params

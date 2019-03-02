@@ -1,47 +1,37 @@
 <body>
 <main role="main">
-
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  
   <div class="jumbotron">
     <div class="container">
       <div class ="d-none d-md-inline">
-        <h1 class="display-3">可能性はあるがまだスパークしていない若者と、老舗経営者が出会うと一体どうなるのであろう飲み会。</h1>
+        <h1 class="display-3 index_h1">可能性はあるがまだスパークしていない若者と、老舗経営者が出会うと一体どうなるのであろう飲み会。</h1>
       </div>
-      
       <div class="d-md-none">
-        <h1 class="display-3">どうなる飲み会。</h1>
+        <h1 class="display-3 index_h1">どうなる飲み会。</h1>
       </div>
-      <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>  -->
     </div>
   </div>
-
-  
   <div class="container">
-    <!-- Example row of columns -->
-
-      <div class="row">
-            <% @posts.each do |post|%>
+    <div class="row">
+      <% @posts.each do |post|%>
         <div class="col-md-4">
-          <h2><%= post.title %></h2>
-
-          <p><%= post.body %></p>
-          <p><% truncate(post.body,length: 50) %></p>
-        <p><%= image_tag post.image_url.to_s %></p>
-          <p><%= link_to "続きを読む", post, class: "btn btn-secondary" %></p>
+          <h2 class="h2_index"><%= post.title %></h2>
+            <p><%= post.body %></p>
+            <p><% truncate(post.body,length: 50) %></p>
+            <p><%= image_tag post.image_url.to_s %></p>
+            <p><%= link_to "続きを読む", post, class: "btn btn-secondary" %></p>
         </div>
-    <% end %>
-      </div>
+      <% end %>
+    </div>
       <p><%= link_to "バックナンバー", "/posts/d_backnumber", class: "btn btn-secondary" %></p>
   </div>
     <hr>
 
-  </div> <!-- /container -->
+  </div> 
 
 </main>
 
 <footer class="container">
-  <p>© Company 2017-2019</p>
+  <p></p>
 </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>

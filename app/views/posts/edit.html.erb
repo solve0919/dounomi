@@ -23,7 +23,9 @@
         <p><%= form.label :image_url %></p>
         <p><%= form.file_field :image_url, class: "form-control" %></p>
       </div>
-      <%= form.submit '更新する', class: "btn btn-primary" %>
+        <% if session[:user_id].to_i >= 1 %>
+          <%= form.submit '更新する', class: "btn btn-primary" %>
+        <% end %>
     <% end %>
   </div>
 </div>
