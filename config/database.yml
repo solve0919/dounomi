@@ -22,4 +22,4 @@ test:
 
 production:
   url: postgres://relcxmdfmjexus:4d4451d2340f7a1d8df3b5c9bc77c0cc7dfc1bc5ba34d3fb7261a6f5c5e645a8@ec2-54-204-41-109.compute-1.amazonaws.com:5432/d653ug07iiqudo
-adapter: postgresql
+  adapter: postgresql
