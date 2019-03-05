@@ -8,7 +8,6 @@ Rails.application.routes.draw do
     end
   end
   root "posts#index"
-
   get "login" => "authors#login_form"
   post "login" => "authors#login"
   post "logout" => "authors#loout"
