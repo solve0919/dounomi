@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dvep68cnz
+  api_key: '173831663979914'
+  api_secret: 8Tu7oOPkoVkcAoWflT1Ie0d0Dng
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: dvep68cnz
+  api_key: '173831663979914'
+  api_secret: 8Tu7oOPkoVkcAoWflT1Ie0d0Dng
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: dvep68cnz
+  api_key: '173831663979914'
+  api_secret: 8Tu7oOPkoVkcAoWflT1Ie0d0Dng
+  enhance_image_tag: true
+  static_file_support: false
