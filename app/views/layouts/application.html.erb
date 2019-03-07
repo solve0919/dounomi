@@ -44,24 +44,18 @@
           <a class="nav-item"><%= link_to "投稿", "/posts/new", class: "btn btn-secondary" %></a>
         </li>  
       <% end %>
-      
-
     </ul>
   </div>
 </nav>
-
-
     <div class="space">
         <% if flash[:notice] %>
       <div class="flash bg-danger">
         <%= flash[:notice] %>
       </div>
-    <% end %>
+        <% end %>
     <% if session[:user_id] %>
-
-    <div class="bg-danger">ログイン中</div>
-
-<% end %>
+      <div class="bg-danger">ログイン中</div>
+    <% end %>
       <%= yield %>
     </div>
   </body>
