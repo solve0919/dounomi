@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :posts do
-
     collection do
       get "d_backnumber"
       get "d_about"
